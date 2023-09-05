@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Check Symptom</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fonts/elegant-font/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+<link rel="stylesheet" href="styles/bootstrap.css" />
+<link rel="stylesheet" href="styles/main.css" />
+<link href="../HomePage/styles/search.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div class="mobile-nav-wrapper">
+  <div class="mobile-menu-inner">
+    <ul class="mobile-menu">
+      <li class="scroll-to-section"><a href="../HomePage/index.html">Homepage</a></li>
+      <li class="scroll-to-section"><a href="../HomePage/CheckSymptom.html">Search symptom</a></li>
+      <li class="scroll-to-section"><a href="../HomePage/index.html#OurServices">Our Services</a></li>
+      <li class="scroll-to-section"><a href="../HomePage/index.html#HealthAssistant">Health Assistant</a></li>
+      
+    </ul>
+  </div>
+</div>
+<div class="mobile-menu-overlay"></div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container expanded">
+    <div class="header-wrap">
+      <div class="header-logo"> <img src="images/logo.png" style="max-width: 300px;" alt=""> </div>
+      <div class="header-nav">
+        <ul class="main-menu">
+          <li class="scroll-to-section"><a href="../HomePage/index.html">Homepage</a></li>
+          <li class="scroll-to-section"><a href="../HomePage/CheckSymptom.html">Search symptom</a></li>
+          <li class="scroll-to-section"><a href="../HomePage/index.html#OurServices">Our Services</a></li>
+          <li class="scroll-to-section"><a href="../HomePage/index.html#HealthAssistant">Health Assistant</a></li>
+          
+        </ul>
+      </div>
+      <div class="header-widgets">
+        <ul class="right-menu">
+          <li class="menu-item menu-search" ><a href = "../login/index.html">
+            <div class="main-bordered-button chat-wrap" > <span>Log in/Sign in to live chat</span> </div>
+          </a></li>
+          <li class="menu-item menu-mobile-nav"> <a href="#" class="menu-bar" id="menu-show-mobile-nav"> <span class="hamburger"></span> </a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="page-bg">
+</div>
+
+
+    <div class="web_check" id="web_check">
+       
+       
+       <div class="check-box">
+
+    
+    <div class="check_form">
+        <form action="result.php" name="checkform" accept-charset="utf-8" id="check_form" class="checkForm" method="post">
+          <input type="hidden" name="did" value="0"/>
+       <input type="hidden" name="to" value="log"/>
+
+        <div class="SymptopmArea1" id="SymptopmArea1">
+        <div class="inputOuter" id="SymptopmArea1Area"> 
+            <input type="text" id="Symptopm1" name="Symptopm1" class="inputstyle" placeholder="Enter the first symptom"/>
+        </div>
+        </div>
+
+        <div class="SymptopmArea2" id="SymptopmArea2">
+            <div class="inputOuter" id="SymptopmArea2Area"> 
+                <input type="text" id="Symptopm2" name="Symptopm2" class="inputstyle" placeholder="Enter the second symptom"/>
+            </div>
+            </div>
+
+            <div class="SymptopmArea3" id="SymptopmArea3">
+                <div class="inputOuter" id="SymptopmArea3Area"> 
+                    <input type="text" id="Symptopm3" name="Symptopm3" class="inputstyle" placeholder="Enter the third symptom"/>
+                </div>
+                </div>
+
+                <div class="SymptopmArea4" id="SymptopmArea4">
+                    <div class="inputOuter" id="SymptopmArea4Area"> 
+                        <input type="text" id="Symptopm4" name="Symptopm4" class="inputstyle" placeholder="Enter the fourth symptom"/>
+                    </div>
+                    </div>
+
+
+       
+        <div  style="padding-left:50px;margin-top:20px;">
+            
+            <input type="Submit" value="Search" style="width:150px;" class="button_blue" />
+
+            
+            <input type="reset" value="Empty content" style="width:150px; margin-top: 10px;" class="button_blue"/>
+        
+        </div>
+
+       
+      </form>
+   </div>
+   
+        </div>
+       
+    </div>
+    
+
+
+
+
+
+
+
+<!-- Scripts --> 
+<script src="scripts/vendors/jquery-3.6.0.min.js"></script> 
+<script src="scripts/vendors/jquery.hoverIntent.min.js"></script> 
+<script src="scripts/vendors/perfect-scrollbar.min.js"></script> 
+<script src="scripts/vendors/jquery.easing.min.js"></script> 
+<script src="scripts/vendors/wow.min.js"></script> 
+<script src="scripts/vendors/owl-carousel.js"></script> 
+<script src="scripts/main.js"></script>
+</body>
+</html>
