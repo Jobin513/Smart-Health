@@ -2,11 +2,13 @@
 var express = require('express'),
     app = express(),
     server = require('http').createServer(app),
-    io = require('socket.io').listen(server),
-    users=[];
-app.use('/', express.static(__dirname + '/chatroom'));
-server.listen(80);
+    io = require('socket.io')(server), // Use 'socket.io' directly as a function
+    users = [];
 
+server.listen(process.env.PORT || 2019); // It will run on localhost:(any number)
+console.log("Server is running on port 2019");
+
+app.use('/', express.static(__dirname + '/chatroom'));
 
 io.sockets.on('connection', function(socket) {
 
