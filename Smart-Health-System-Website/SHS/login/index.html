@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>Smart Health System</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="images/login.js"></script>
+<link href="css/login2.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1>Health Assistant Online Chatroom Portal<sup>2021</sup></h1>
+
+<div class="login" style="margin-top:50px;">
+    
+    <div class="header">
+        <div class="switch" id="switch"><a class="switch_btn_focus" id="switch_qlogin" href="javascript:void(0);" tabindex="7">Log in</a>
+			<a class="switch_btn" id="switch_login" href="javascript:void(0);" tabindex="8">Create accout</a><div class="switch_bottom" id="switch_bottom" style="position: absolute; width: 64px; left: 0px;"></div>
+        </div>
+    </div>    
+  
+    
+    <div class="web_qr_login" id="web_qr_login" style="display: block; height: 235px;">    
+
+            <div class="web_login" id="web_login">
+               
+               
+               <div class="login-box">
+    
+            
+			<div class="login_form">
+				<form name="loginform" accept-charset="utf-8" action = "login.php"  id="login_form" class="loginForm" onsubmit = "return validation()" method="POST">
+
+                    <input type="hidden" name="did" value="0"/>
+               <input type="hidden" name="to" value="log"/>
+                <div class="uinArea" id="uinArea">
+                
+                <div class="inputOuter" id="uArea">
+                    
+                    <input type="text" id="u" name="u" class="inputstyle" placeholder="Email or Phone number"/>
+                </div>
+                </div>
+
+                <div class="pwdArea" id="pwdArea">
+               
+               <div class="inputOuter" id="pArea">
+                    
+                    <input type="password" id="p" name="p" class="inputstyle" placeholder="Password"/>
+                </div>
+                </div>
+               
+                <div style="padding-left:50px;margin-top:20px;">
+                    <input type="submit" value="Log In" style="width:150px;" class="button_blue" /></div>
+              </form>
+           </div>
+           
+            	</div>
+               
+            </div>
+            
+  </div>
+
+ 
+    <div class="qlogin" id="qlogin" style="display: none; ">
+   
+    <div class="web_login"><form name="form2" id="regUser" accept-charset="utf-8"  action="sign.php" method="post" onkeyup="validate()">
+	      <input type="hidden" name="to" value="reg"/>
+		      		       <input type="hidden" name="did" value="0"/>
+        <ul class="reg_form" id="reg-ul">
+        		
+                <li>
+                	
+                    <div class="inputOuter2">
+                        <input type="text" id="user" name="user" maxlength="16" class="inputstyle2" placeholder="Username:"/>
+                    </div>
+                    
+                </li>
+                
+                <li>
+                    <div class="inputOuter2">
+                        <input type="password" id="passwd"  name="passwd" maxlength="16" class="inputstyle2" placeholder="Password:"/>
+                    </div>
+                    
+                </li>
+                <li>
+                    <div class="inputOuter2">
+                        <input type="password" id="passwd2" name="passwd2" maxlength="16" class="inputstyle2" placeholder="Confirm Password:"/>
+                    </div>
+                    
+                </li>
+                
+                <li>
+                    <div class="inputOuter2">
+                       
+                        <input type="text" id="Email" name="Email" maxlength="30" class="inputstyle2" placeholder="Email:" />
+                    </div>
+                   
+                </li>
+                
+                <li>
+                    <div class="inputArea">
+                        <input type="submit" id="reg"  style="margin-top:10px;margin-left:85px;" class="button_blue" value="Create Account" oncanplay="return validate()"/> 
+                    </div>
+                    
+                </li><div class="cl"></div>
+            </ul></form>
+           
+    
+    </div>
+   
+    
+    </div>
+
+</div>
+<script>
+    function validation()
+    {
+        var id=document.f1.u.value;
+        var ps=document.f1.p.value;
+        if(id.length=="" && ps.length=="") {
+            alert("User Name and Password fields are empty");
+            return false;
+        }
+        else
+        {
+            if(id.length=="") {
+                alert("User Name is empty");
+                return false;
+            }
+            if (ps.length=="") {
+            alert("Password field is empty");
+            return false;
+            }
+        }
+    }
+
+    function validate() {
+              var pwd1 = document.getElementById("passwd").value;
+              var pwd2 = document.getElementById("passwd2").value;
+		
+             if(pwd1 == pwd2) {
+               document.getElementById("tishi").innerHTML="<font color='green'>Same Password</font>";
+               document.getElementById("submit").disabled = false;
+              }
+              else {
+               document.getElementById("tishi").innerHTML="<font color='red'>Different Password</font>";
+                document.getElementById("submit").disabled = true;
+              }
+          }
+</script>
+</body>
+
+</html>
