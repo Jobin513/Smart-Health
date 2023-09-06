@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include('connectdb.php');
     $username = $_POST["user"];
     $password = $_POST["passwd"];
@@ -9,12 +10,13 @@
 
 
     if($conn->query($sql)){
+        $_SESSION['username'] = $username;
+        echo '<p style="font-size:24pt;color:black;text-align:center">'."Account registration is successful! Please sign in".'<p>';
 
-        echo '<p style="font-size:24pt;color:black;text-align:center">'."Account registration is successful! Jumping to Health assistant online chatroom...".'<p>';
-
-        $url = "https://healthonlinechatroom.herokuapp.com/";
+        $url = "http://localhost/Smart-Health/Smart-Health-System-Website/SHS/login/index.html";
 
         echo "<meta http-equiv='Refresh' content='3;URL=$url'>";
+        exit();
 
     }else{
 

@@ -27,7 +27,7 @@
     
             
 			<div class="login_form">
-				<form name="loginform" accept-charset="utf-8" action = "login.php"  id="login_form" class="loginForm" onsubmit = "return validation()" method="POST">
+				<form name="loginform" accept-charset="utf-8" action="login.php" method="POST">
 
                     <input type="hidden" name="did" value="0"/>
                <input type="hidden" name="to" value="log"/>
@@ -111,40 +111,36 @@
 
 </div>
 <script>
-    function validation()
-    {
-        var id=document.f1.u.value;
-        var ps=document.f1.p.value;
-        if(id.length=="" && ps.length=="") {
-            alert("User Name and Password fields are empty");
+   function validation() {
+    var id = document.loginform.u.value; // Use the correct form name
+    var ps = document.loginform.p.value; // Use the correct form name
+    if (id.length == "" && ps.length == "") {
+        alert("User Name and Password fields are empty");
+        return false;
+    } else {
+        if (id.length == "") {
+            alert("User Name is empty");
             return false;
         }
-        else
-        {
-            if(id.length=="") {
-                alert("User Name is empty");
-                return false;
-            }
-            if (ps.length=="") {
+        if (ps.length == "") {
             alert("Password field is empty");
             return false;
-            }
         }
     }
+}
 
-    function validate() {
-              var pwd1 = document.getElementById("passwd").value;
-              var pwd2 = document.getElementById("passwd2").value;
-		
-             if(pwd1 == pwd2) {
-               document.getElementById("tishi").innerHTML="<font color='green'>Same Password</font>";
-               document.getElementById("submit").disabled = false;
-              }
-              else {
-               document.getElementById("tishi").innerHTML="<font color='red'>Different Password</font>";
-                document.getElementById("submit").disabled = true;
-              }
-          }
+function validate() {
+    var pwd1 = document.getElementById("passwd").value;
+    var pwd2 = document.getElementById("passwd2").value;
+
+    if (pwd1 == pwd2) {
+        document.getElementById("tishi").innerHTML = "<font color='green'>Same Password</font>";
+        document.getElementById("reg").disabled = false; // Correct the ID of the submit button
+    } else {
+        document.getElementById("tishi").innerHTML = "<font color='red'>Different Password</font>";
+        document.getElementById("reg").disabled = true; // Correct the ID of the submit button
+    }
+}
 </script>
 </body>
 

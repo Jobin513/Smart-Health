@@ -1,5 +1,17 @@
+function getParam(paramName) {
+    var search = window.location.search.substring(1); 
+    var params = search.split('&'); 
+    for (var i = 0; i < params.length; i++) {
+        var param = params[i].split('=');
+        if (param[0] === paramName) {
+            return decodeURIComponent(param[1]);
+        }
+    }
+    return null; 
+}
 $(function(){
-	
+	 var username = getParam("username");
+	 console.log("Username from URL: " + username);
 	$('#switch_qlogin').click(function(){
 		$('#switch_login').removeClass("switch_btn_focus").addClass('switch_btn');
 		$('#switch_qlogin').removeClass("switch_btn").addClass('switch_btn_focus');

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Connectino</title>
+    <title>Connection</title>
   </head>
   <body>
     
