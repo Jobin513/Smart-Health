@@ -10,11 +10,9 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Query to fetch symptoms
 $sql = "SELECT symptom_name FROM symptoms";
 $result = $conn->query($sql);
 
-// Create an array to store symptom data
 $symptoms = array();
 
 if ($result->num_rows > 0) {
@@ -23,12 +21,8 @@ if ($result->num_rows > 0) {
     }
 }
 
-// Close the database connection
 $conn->close();
-
-// Set the content type to JSON
 header('Content-Type: application/json');
 
-// Output the symptom data as JSON
 echo json_encode($symptoms);
 ?>

@@ -30,7 +30,6 @@
 </div>
 <div class="mobile-menu-overlay"></div>
 
-<!-- Header -->
 <header class="site-header">
   <div class="container expanded">
     <div class="header-wrap">
@@ -71,8 +70,6 @@
        <input type="hidden" name="to" value="log"/>
        
        <?php
-       //embedded sql to retrieve data
-       //select everything from incident where incident id = POST['incidentID']
        include('../login/connectdb.php');
        $Symptom1 = $_POST['Symptopm1'];
        $Symptom2 = $_POST['Symptopm2'];

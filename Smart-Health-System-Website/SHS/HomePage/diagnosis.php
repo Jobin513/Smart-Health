@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$selectedSymptomName = $_POST['symptoms']; // Assuming you use POST
+$selectedSymptomName = $_POST['symptoms']; 
 $gender = $_POST['gender'];
 
 if ($gender === 'Female') {
@@ -36,7 +36,6 @@ if ($result->num_rows > 0) {
         $response[] = $row;
     }
 }
-
 $conn->close();
 
 header('Content-Type: application/json');
